@@ -179,10 +179,10 @@ class Legend {
       if (w.config.legend.markers.customHTML) {
         if (Array.isArray(w.config.legend.markers.customHTML)) {
           if (w.config.legend.markers.customHTML[i]) {
-            elMarker.innerHTML = w.config.legend.markers.customHTML[i]()
+            elMarker.innerHTML = Utils.sanitizeDom(w.config.legend.markers.customHTML[i]())
           }
         } else {
-          elMarker.innerHTML = w.config.legend.markers.customHTML()
+          elMarker.innerHTML = Utils.sanitizeDom(w.config.legend.markers.customHTML())
         }
       }
 
